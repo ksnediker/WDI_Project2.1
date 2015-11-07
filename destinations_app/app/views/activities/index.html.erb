@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/activities.css">
+</head>
+<body>
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <h1 class="pure-u-4-5">What to do</h1>
+    </div>
+    <div class="pure-u-7-8">
+      <% @activities.each do |t| %>
+        <div class="pure-u-10-24">
+          <h4><%= t.stay %></h4>
+          <h4><%= t.eat %></h4>
+          <h4><%= t.visit %></h4>
+          <h4><%= t.drink %></h4>  
+      </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>
