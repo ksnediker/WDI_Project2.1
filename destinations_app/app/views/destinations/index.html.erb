@@ -13,7 +13,7 @@
           <h2><%= t.city %></h2>
           <h4><%= t.region %></h2>
           <h4><%= t.country %></h2>
-      <% link_to "View", destinations_path(t.id) %>        
+      <%= link_to "View", activity_path(t) %>        
       </div>
         <% end %>
       </div>

@@ -1,4 +1,11 @@
+<h1><%= @destination.city %></h1> 
+<h2><%= @destination.region %></h2>
+<h2><%= @destination.country %></h2>
+
 <h4>Where to stay: <%= @activity.stay %></h4>
 <h4>Where to eat: <%= @activity.eat %></h4>
 <h4>Where to visit: <%= @activity.visit %></h4>
 <h4>Where to drink: <%= @activity.drink %></h4>
+
+<%= link_to "Edit Activity", edit_activity_path %> 
+<%= link_to "New Activity", new_activity_path %>
