@@ -1,13 +1,12 @@
 class ActivitiesController < ApplicationController
+  before_action :set_activity, only: [:show, :edit, :update]
+  # before_action :set_destination, only: [:show]
 
 	# def index
 	# 	@activities = Activity.all
 	# end 
 
   def show
-    @activity = Activity.find(params[:id])
-    @user = @user.activities
-    @destination = @destination.activities
   end
 
   def new
@@ -25,11 +24,9 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
-    @activity = Activity.find(params[:id])
   end
 
   def update
-    @activity = Activity.find(params[:id])
     if @activity.update_attributes(activity_params)
     redirect_to @activity
   else
@@ -38,6 +35,10 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
+  def set_activity
+    @activity = Activity.find(params[:id])
+  end
 
   def activity_params
     params.require(:activity).permit(:stay, :eat, :visit, :drink)

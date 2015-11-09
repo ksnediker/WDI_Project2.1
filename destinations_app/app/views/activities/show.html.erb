@@ -6,9 +6,6 @@
     	<div class="pure-u-1" id="acthead">
       		<h1>What to do</h1>
 		</div> 
-		<div class="pure-u-1" id="cityname">	
-			<h2><%= @destination.city %></h2>
-    	</div>
     	<div class="pure-u-1-4" id="stay">
 			<h4>Where to stay:</h4>
 			<p><%= @activity.stay %></p>
@@ -24,9 +21,6 @@
 		<div class="pure-u-1-4" id="drink">
 			<h4>Where to drink:</h4>
 			<p><%= @activity.drink %></p><br>
-		</div>
-		<div class="pure-u-1" id="email">
-			<p>provided by: <%= @user.email %></p>
 		</div>
 		<div class="pure-u-1" id="edit">
 			<%= link_to "Edit Activity", edit_activity_path %>
