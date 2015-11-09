@@ -7,13 +7,13 @@ Rails.application.routes.draw do
 
   get '/' => 'destinations#index'
 
+  get '/destinations/:id' => 'destinations#show', as: :destination_show
+
   post '/activities' => 'activities#create'
 
   get '/activities/new' => 'activities#new', as: :new_activity
 
   get '/activities/:id/edit' => 'activities#edit', as: :edit_activity
-
-  get '/destinations/:id' => 'destinations#show', as: :destination_show
 
   get '/activities/:id' => 'activities#show', as: :activity
 

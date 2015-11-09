@@ -6,16 +6,12 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
-    @destination = Destination.find(params[:id])
-    @user = User.find(params[:id])
+    @user = @user.activities
+    @destination = @destination.activities
   end
 
   def new
     @activity = Activity.new
-  end
-
-  def edit
-    @activity = Activity.find(params[:id])
   end
 
   def create
@@ -28,10 +24,14 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def edit
+    @activity = Activity.find(params[:id])
+  end
+
   def update
     @activity = Activity.find(params[:id])
     if @activity.update_attributes(activity_params)
-    redirect_to activity_path
+    redirect_to @activity
   else
     render 'edit'
   end
