@@ -1,11 +1,38 @@
-<h1><%= @destination.city %></h1> 
-<h2><%= @destination.region %></h2>
-<h2><%= @destination.country %></h2>
-
-<h4>Where to stay: <%= @activity.stay %></h4>
-<h4>Where to eat: <%= @activity.eat %></h4>
-<h4>Where to visit: <%= @activity.visit %></h4>
-<h4>Where to drink: <%= @activity.drink %></h4>
-
-<%= link_to "Edit Activity", edit_activity_path %> 
-<%= link_to "New Activity", new_activity_path %>
+<head>
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css">
+</head>
+<body>
+	<div class="pure-g">
+    	<div class="pure-u-1" id="acthead">
+      		<h1>What to do</h1>
+		</div> 
+		<div class="pure-u-1" id="cityname">	
+			<h2><%= @destination.city %></h2>
+    	</div>
+    	<div class="pure-u-1-4" id="stay">
+			<h4>Where to stay:</h4>
+			<p><%= @activity.stay %></p>
+		</div>
+		<div class="pure-u-1-4" id="eat">
+			<h4>Where to eat:</h4>
+			<p><%= @activity.eat %></p>
+		</div>
+		<div class="pure-u-1-4" id="visit">
+			<h4>Where to visit:</h4>
+			<p><%= @activity.visit %></p>
+		</div>
+		<div class="pure-u-1-4" id="drink">
+			<h4>Where to drink:</h4>
+			<p><%= @activity.drink %></p><br>
+		</div>
+		<div class="pure-u-1" id="email">
+			<p>provided by: <%= @user.email %></p>
+		</div>
+		<div class="pure-u-1" id="edit">
+			<%= link_to "Edit Activity", edit_activity_path %>
+		</div> 
+		<div class="pure-u-1">
+			<%= link_to "New Activity", new_activity_path %>
+		</div>
+	</div>
+</body>

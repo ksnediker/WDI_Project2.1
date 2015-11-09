@@ -1,14 +1,14 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/destinations.css">
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css">
 </head>
 <body>
   <div class="pure-g">
-    <div class="pure-u-1">
-      <h1 class="pure-u-4-5">Destinations</h1>
+    <div class="pure-u-1" id="desthead">
+      <h1 class="pure-u-1">Destinations</h1>
     </div>
-    <div class="pure-u-7-8">
+    <div class="pure-u-1">
       <% @destinations.each do |t| %>
-        <div class="pure-u-10-24">
+        <div class="pure-u-10-24" id="location">
           <%= image_tag t.img_url %>
           <h2><%= t.city %></h2>
           <h4><%= t.region %></h2>

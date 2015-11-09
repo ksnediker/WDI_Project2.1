@@ -1,4 +1,11 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+body {
+	text-align: center;
+	background-color: white;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+#header {
+	font-size: 70pt;
+	background-color: gray;
+}
+

@@ -1,15 +1,62 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+	text-align: center;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+img {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+#acthead {
+	font-size: 40pt;
+	background-color: gray;
+}
+
+#desthead {
+	font-size: 40pt;
+	background-color: gray;
+	margin-bottom: 70pt;
+}
+
+#cityname {
+	font-size: 30pt;
+	font-style: italic;
+}
+
+.pure-u-1-4 {
+	font-size: 14pt;
+}
+
+#email {
+	text-align: left;
+	margin-left: 50pt;
+}
+
+#edit {
+	margin-bottom: 20pt;
+}
+
+#stay {
+	background-color: #B3B3FF;
+}
+
+#eat {
+	background-color: #88C3FF;
+}
+
+#visit {
+	background-color: #88FFE1;
+}
+
+#drink {
+	background-color: #B3CCCC;
+}
+
+#location {
+	background-color: gray;
+	color: white;
+	padding-top: 20pt;
+	padding-bottom: 20pt;
+}
+

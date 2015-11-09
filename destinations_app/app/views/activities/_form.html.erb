@@ -1,4 +1,5 @@
-<%= form_for(@activity) do |f| %>  
+<body>
+	<%= form_for(@activity) do |f| %>  
   <div> 
     Where to stay: <%= f.text_field :stay %><br> 
     Where to eat: <%= f.text_field :eat %><br>
@@ -9,3 +10,4 @@
     <%= f.submit "Submit" %> 
   </div> 
 <% end %>
+</body>

@@ -7,21 +7,22 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     @destination = Destination.find(params[:id])
-  end
-
-  def edit
-    @activity = Activity.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def new
     @activity = Activity.new
   end
 
+  def edit
+    @activity = Activity.find(params[:id])
+  end
+
   def create
     @activity = Activity.new(activity_params)
 
     if @activity.save
-      redirect_to activity_path
+      redirect_to @activity
     else
       render :action => :new
     end
